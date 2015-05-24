@@ -1,0 +1,5 @@
+# _Storing provenance_ #
+
+If no _storage_ is added, the SPADE server will silently discard any provenance metadata that is sent to it. To subsequently use the information, it must be committed to persistent storage. An arbitrary number of storage subsystems can be added. The SPADE server will send the filtered, integrated provenance metadata to each of the storage classes that have been added.
+
+SPADE includes support for storing provenance in the [Neo4j](http://neo4j.org) graph database, the [H2](http://www.h2database.com) SQL relational database, and in [Graphviz](http://www.graphviz.org/) format. (Support for other storage can be implemented creating a class in the `spade.storage.*` package that extends the [spade.core.AbstractStorage](http://code.google.com/p/data-provenance/source/browse/trunk/SPADE/src/spade/core/AbstractStorage.java) class.)
